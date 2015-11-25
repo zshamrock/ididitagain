@@ -30,6 +30,8 @@
   apt: name={{ item }} state=present
   with_items:
     - calibre
+    - wget
+    - curl
 
 - command: git config --global user.name "Aliaksandr Kazlou"
 - command: git config --global user.email aliaksandr.kazlou@gmail.com
@@ -37,3 +39,8 @@
 - name: set main editor to vim
   become: yes
   alternatives: name=editor path=/usr/bin/vim.basic
+
+- name: install dropbox
+  shell: cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
+  args: 
+    creates: ~/.dropbox-dist
