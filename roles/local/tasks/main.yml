@@ -23,6 +23,7 @@
     - git
     - chromium
     - tmux
+    - keepassx
 
 - name: install extra packages
   become: yes
