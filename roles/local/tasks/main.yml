@@ -28,3 +28,6 @@
   apt: name={{ item }} state=present
   with_items:
     - calibre
+
+- command: git config --global user.name "Aliaksandr Kazlou"
+- command: git config --global user.email aliaksandr.kazlou@gmail.com
