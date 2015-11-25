@@ -21,3 +21,10 @@
     - tilda
     - firmware-iwlwifi
     - git
+    - chromium
+
+- name: install extra packages
+  become: yes
+  apt: name={{ item }} state=present
+  with_items:
+    - calibre
