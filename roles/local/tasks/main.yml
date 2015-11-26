@@ -81,7 +81,7 @@
     - /boot/grub
 
 - name: install Oracle JDK 1.8
-  file: path=~/downloads state=directory
-- shell: 'cd ~/downloads && wget -O - --quiet --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/{{ jdk_version }} | tar xzf -'
+  become: yes
+  shell: 'wget -O - --quiet --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/{{ jdk_archive }} | tar -C /usr/lib/jvm -xzf -'
   args:
-    creates: ~/downloads/jdk1.8.0_65
+    creates: /usr/lib/jvm/jdk{{ jdk_version }}
