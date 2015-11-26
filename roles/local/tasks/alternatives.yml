@@ -1,0 +1,4 @@
+---
+- name: set main editor to vim
+  become: yes
+  alternatives: name=editor path=/usr/bin/vim.basic

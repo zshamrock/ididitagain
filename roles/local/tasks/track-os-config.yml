@@ -1,0 +1,19 @@
+---
+- name: init git for OS config directories (home)
+  shell: cd {{ item }} && git init && git add . && git commit -m "Initial commit"
+  args:
+    creates: "{{ item }}/.git"
+  with_items:
+    - ~/.config
+    - ~/.gconf
+    - ~/.local
+
+- name: init git for OS config directories (non home)
+  become: yes
+  shell: cd {{ item }} && git init && git add . && git commit -m "Initial commit"
+  args:
+    creates: "{{ item }}/.git"
+  with_items:
+    - /etc
+    - /usr/share
+    - /boot/grub

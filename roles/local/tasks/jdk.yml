@@ -1,0 +1,7 @@
+---
+- name: install Oracle JDK 1.8
+  become: yes
+  shell: 'wget -O - --quiet --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/{{ jdk_archive }} | tar -C /usr/lib/jvm -xzf -'
+  args:
+    creates: /usr/lib/jvm/jdk{{ jdk_version }}
+  notify: update java version

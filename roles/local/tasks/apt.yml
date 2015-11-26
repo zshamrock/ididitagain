@@ -1,0 +1,12 @@
+---
+- name: enable contrib and non-free packages
+  become: yes
+  template: src=contrib-non-free.list dest=/etc/apt/sources.list.d/contrib-non-free.list
+
+- name: update packages cache
+  become: yes
+  apt: update_cache=yes cache_valid_time=3600
+
+- name: upgrade dist
+  become: yes
+  apt: upgrade=dist
