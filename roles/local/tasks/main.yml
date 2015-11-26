@@ -33,8 +33,24 @@
     - wget
     - curl
 
-- command: git config --global user.name "Aliaksandr Kazlou"
-- command: git config --global user.email aliaksandr.kazlou@gmail.com
+- name: collect git config --global user properties
+  command: git config --global --get user.name
+  register: global_git_user_name
+  ignore_errors: True
+- command: git config --global --get user.email
+  register: global_git_user_email
+  ignore_errors: True
+
+- name: set git user.name property
+  command:  git config --global user.name "{{ git_user_name }}"
+  when: global_git_user_name.stdout != git_user_name
+
+- name: set git user.email property
+  command: git config --global user.email {{ git_user_email }}
+  when: global_git_user_email.stdout != git_user_email
+
+- debug: msg="git global user.name is {{ global_git_user_name.stdout }} and var is {{ git_user_name }}"
+- debug: msg="git global user.email is {{ global_git_user_email.stdout }} and var is {{ git_user_email }}"
 
 - name: set main editor to vim
   become: yes
@@ -54,7 +70,6 @@
     - ~/.gconf
     - ~/.local
 
-
 - name: init git for OS config directories (non home)
   become: yes
   shell: cd {{ item }} && git init && git add . && git commit -m "Initial commit"
@@ -64,3 +79,9 @@
     - /etc
     - /usr/share
     - /boot/grub
+
+- name: install Oracle JDK 1.8
+  file: path=~/downloads state=directory
+- shell: 'cd ~/downloads && wget -O - --quiet --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/{{ jdk_version }} | tar xzf -'
+  args:
+    creates: ~/downloads/jdk1.8.0_65
