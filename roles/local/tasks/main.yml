@@ -1,6 +1,6 @@
 ---
 - include: apt.yml
-- include: packages.yml
+- include: packages.yml tags=packages
 - include: git.yml tags=git
 - include: alternatives.yml
 - include: dropbox.yml

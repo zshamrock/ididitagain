@@ -12,7 +12,6 @@
     - chromium
     - tmux
     - keepassx
-  tags: packages
 
 - name: install extra packages
   become: yes
@@ -23,4 +22,3 @@
     - curl
     - tree
     - meld
-  tags: packages
