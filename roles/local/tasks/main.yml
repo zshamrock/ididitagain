@@ -11,27 +11,7 @@
   become: yes
   apt: upgrade=dist
 
-- name: install core packages
-  become: yes
-  apt: name={{ item }} state=present
-  with_items:
-    - mc
-    - vim
-    - terminator
-    - tilda
-    - firmware-iwlwifi
-    - git
-    - chromium
-    - tmux
-    - keepassx
-
-- name: install extra packages
-  become: yes
-  apt: name={{ item }} state=present
-  with_items:
-    - calibre
-    - wget
-    - curl
+- include: packages.yml
 
 - name: collect git config --global user properties
   command: git config --global --get user.name
@@ -85,3 +65,4 @@
   shell: 'wget -O - --quiet --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/{{ jdk_archive }} | tar -C /usr/lib/jvm -xzf -'
   args:
     creates: /usr/lib/jvm/jdk{{ jdk_version }}
+  notify: update java version

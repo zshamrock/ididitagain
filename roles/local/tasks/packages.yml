@@ -1,0 +1,26 @@
+---
+- name: install core packages
+  become: yes
+  apt: name={{ item }} state=present
+  with_items:
+    - mc
+    - vim
+    - terminator
+    - tilda
+    - firmware-iwlwifi
+    - git
+    - chromium
+    - tmux
+    - keepassx
+  tags: packages
+
+- name: install extra packages
+  become: yes
+  apt: name={{ item }} state=present
+  with_items:
+    - calibre
+    - wget
+    - curl
+    - tree
+    - meld
+  tags: packages
