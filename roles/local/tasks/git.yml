@@ -3,9 +3,12 @@
   command: git config --global --get user.name
   register: global_git_user_name
   ignore_errors: True
+  changed_when: False
+
 - command: git config --global --get user.email
   register: global_git_user_email
   ignore_errors: True
+  changed_when: False
 
 - name: set git user.name property
   command:  git config --global user.name "{{ git_user_name }}"
