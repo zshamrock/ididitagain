@@ -6,3 +6,4 @@
 - include: dropbox.yml
 - include: track-os-config.yml
 - include: jdk.yml tags=jdk
+- include: go.yml tags=dev
