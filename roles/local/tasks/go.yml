@@ -1,0 +1,11 @@
+---
+- name: install Go lang
+  become: yes
+  shell: wget -O - --quiet https://storage.googleapis.com/golang/go{{ go_version }}.linux-amd64.tar.gz | tar -C /usr/local -xzf -
+  args:
+    creates: "{{ go_root }}"
+  notify: 
+    - chmod GOROOT
+    - add GOPATH into .profile
+    - add GOROOT into .profile
+    - add go bin into .profile

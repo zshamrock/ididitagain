@@ -1,3 +1,5 @@
 ---
 - name: update java version
   debug: msg="Should run update-java-alternatives"
+
+- include: go.yml
