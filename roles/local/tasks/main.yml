@@ -9,3 +9,4 @@
 - include: jdk.yml tags=jdk
 - include: go.yml tags=dev
 - include: atom.yml tags=dev,atom
+- include: chrome.yml tags=packages,chrome
