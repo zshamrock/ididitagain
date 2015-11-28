@@ -1,0 +1,3 @@
+---
+- name: setup autostart applications 
+  file: src={{ role_path }}/files/.config/autostart dest={{ ansible_env.HOME }}/.config/autostart state=link
