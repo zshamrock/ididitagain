@@ -1,8 +1,9 @@
 ---
 # all variables
 
-git_user_name: Aliaksandr Kazlou
-git_user_email: aliaksandr.kazlou@gmail.com
+me:
+  user.name: Aliaksandr Kazlou
+  user.email: aliaksandr.kazlou@gmail.com
 
 jdk_version: 1.8.0_65
 jdk_archive: 8u65-b17/jdk-8u65-linux-x64.tar.gz
