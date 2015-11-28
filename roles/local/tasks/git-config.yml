@@ -11,8 +11,6 @@
   ignore_errors: True
   changed_when: False
 
-- debug: var=git_config
-
 - name: set git config --global properties
   command:  git config --global {{ item.item }} "{{ me[item.item] }}"
   with_items: "{{ git_config.results }}"
