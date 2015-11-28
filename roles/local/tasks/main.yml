@@ -8,3 +8,4 @@
 - include: track-os-config.yml
 - include: jdk.yml tags=jdk
 - include: go.yml tags=dev
+- include: atom.yml tags=dev,atom

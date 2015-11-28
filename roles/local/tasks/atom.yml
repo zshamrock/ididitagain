@@ -1,0 +1,12 @@
+---
+# be sure atom is installed first from deb-packages.yml 
+
+- name: collect stat about existing packages
+  stat: path={{ ansible_env.HOME }}/.atom/packages/{{ item }}
+  with_lines: cat {{ role_path }}/files/atom-packages.txt
+  register: atom_packages
+
+- name: install missing atom packages 
+  command: apm install {{ item.item }} 
+  with_items: "{{ atom_packages.results }}"
+  when: not item.stat.exists

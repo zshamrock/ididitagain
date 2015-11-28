@@ -1,0 +1,9 @@
+vim-mode
+vim-surround
+language-go
+go-plus
+go-config
+autocomplete-go
+linter-golinter
+language-clojure
+linter-clojure
