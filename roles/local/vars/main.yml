@@ -1,0 +1,6 @@
+---
+deb_packages:
+  - { url: "http://download.cdn.viber.com/cdn/desktop/Linux/viber.deb", name: "viber" } 
+  - { url: "https://slack-ssb-updates.global.ssl.fastly.net/linux_releases/slack-desktop-1.2.6-amd64.deb", name: "slack-desktop" } 
+  - { url: "https://atom.io/download/deb", name: "atom"} 
+  

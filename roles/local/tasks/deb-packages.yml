@@ -1,13 +1,18 @@
 ---
+- name: verify missing packages
+  shell: dpkg -s {{ item.name }} 2>&1 | grep -i "is not installed" -c
+  with_items: "{{ deb_packages }}"
+  register: deb_packages_status
+  ignore_errors: True
+  changed_when: False
+
 - name: download deb packages from the web
-  get_url: url={{ item.url }} dest=/tmp/{{ item.name }} force=no
-  with_items:
-    - { url: "http://download.cdn.viber.com/cdn/desktop/Linux/viber.deb", name: "viber.deb" }
-    - { url: "https://slack-ssb-updates.global.ssl.fastly.net/linux_releases/slack-desktop-1.2.6-amd64.deb", name: "slack.deb" }
+  get_url: url={{ item.item.url }} dest=/tmp/{{ item.item.name }}.deb force=no
+  with_items: "{{ deb_packages_status.results }}"
+  when: item.stdout|int == 1 
 
 - name: install downloaded deb packages
   become: yes
-  shell: dpkg -i /tmp/{{ item }}.deb
-  with_items:
-    - viber
-    - slack
+  apt: deb=/tmp/{{ item.item.name }}.deb state=present
+  with_items: "{{ deb_packages_status.results }}"
+  when: item.stdout|int == 1
