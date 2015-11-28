@@ -13,6 +13,7 @@
     - chromium
     - tmux
     - keepassx
+    - ttf-mscorefonts-installer
 
 - name: install extra packages
   become: yes
@@ -27,3 +28,4 @@
     - apt-transport-https # necessary for slack
     - xclip
     - xsel
+    - python-gpgme # recommended for dropbox

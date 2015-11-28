@@ -1,10 +1,10 @@
 ---
 - include: apt.yml
+- include: gnome-config.yml tags=gnome
 - include: packages.yml tags=packages
 - include: deb-packages.yml tags=deb-packages
 - include: git-config.yml tags=git
 - include: alternatives.yml
-- include: dropbox.yml
 - include: track-os-config.yml
 - include: jdk.yml tags=jdk
 - include: go.yml tags=dev
