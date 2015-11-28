@@ -1,5 +1,3 @@
-# {{ ansible_managed }}
-
 deb http://ftp.nl.debian.org/debian/ jessie contrib non-free 
 deb-src http://ftp.nl.debian.org/debian/ jessie contrib non-free 
 

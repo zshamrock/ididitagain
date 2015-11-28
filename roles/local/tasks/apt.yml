@@ -1,7 +1,7 @@
 ---
 - name: enable contrib and non-free packages
   become: yes
-  template: src=contrib-non-free.list dest=/etc/apt/sources.list.d/contrib-non-free.list
+  copy: src=etc/apt/sources.list.d/contrib-non-free.list dest=/etc/apt/sources.list.d/contrib-non-free.list force=no
 
 - name: update packages cache
   become: yes
