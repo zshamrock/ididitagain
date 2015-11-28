@@ -22,3 +22,5 @@
     - curl
     - tree
     - meld
+    - zip
+    - apt-transport-https # necessary for slack

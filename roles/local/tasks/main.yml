@@ -1,6 +1,7 @@
 ---
 - include: apt.yml
 - include: packages.yml tags=packages
+- include: deb-packages.yml tags=deb-packages
 - include: git.yml tags=git
 - include: alternatives.yml
 - include: dropbox.yml

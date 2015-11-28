@@ -1,0 +1,13 @@
+---
+- name: download deb packages from the web
+  get_url: url={{ item.url }} dest=/tmp/{{ item.name }} force=no
+  with_items:
+    - { url: "http://download.cdn.viber.com/cdn/desktop/Linux/viber.deb", name: "viber.deb" }
+    - { url: "https://slack-ssb-updates.global.ssl.fastly.net/linux_releases/slack-desktop-1.2.6-amd64.deb", name: "slack.deb" }
+
+- name: install downloaded deb packages
+  become: yes
+  shell: dpkg -i /tmp/{{ item }}.deb
+  with_items:
+    - viber
+    - slack
