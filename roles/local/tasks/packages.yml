@@ -5,6 +5,7 @@
   with_items:
     - mc
     - vim
+    - vim-gtk
     - terminator
     - tilda
     - firmware-iwlwifi
@@ -24,3 +25,5 @@
     - meld
     - zip
     - apt-transport-https # necessary for slack
+    - xclip
+    - xsel
