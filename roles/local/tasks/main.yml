@@ -1,5 +1,6 @@
 ---
 - include: apt.yml tags=apt
+- include: dot-files.yml tags=dot-files
 - include: gnome-config.yml tags=gnome
 - include: packages.yml tags=packages
 - include: deb-packages.yml tags=deb-packages

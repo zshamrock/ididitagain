@@ -1,0 +1,8 @@
+---
+- name: create symlink to core dot files
+  file: src={{ role_path }}/files/{{ item }} dest={{ ansible_env.HOME }}/{{ item }} force=yes state=link
+  with_items:
+    - .tmux.conf
+    - .profile 
+    - .gitignore
+    - .vimrc
