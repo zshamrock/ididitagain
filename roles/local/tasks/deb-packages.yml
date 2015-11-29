@@ -6,6 +6,7 @@
     - { url: "https://slack-ssb-updates.global.ssl.fastly.net/linux_releases/slack-desktop-1.2.6-amd64.deb", name: "slack-desktop" } 
     - { url: "https://atom.io/download/deb", name: "atom"} 
     - { url: "https://www.dropbox.com/download?dl=packages/debian/dropbox_2015.10.28_amd64.deb", name: "dropbox" }
+    - { url: "http://www.skype.com/go/getskype-linux-deb-32", name: "skype"}
   register: deb_packages_status
   ignore_errors: True
   changed_when: False
