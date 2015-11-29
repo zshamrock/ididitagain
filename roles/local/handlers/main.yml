@@ -2,4 +2,8 @@
 - name: update java version
   debug: msg="Should run update-java-alternatives"
 
+- name: update packages cache
+  become: yes
+  apt: update_cache=yes
+
 - include: go.yml

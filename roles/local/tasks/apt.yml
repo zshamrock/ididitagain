@@ -10,3 +10,15 @@
 - name: upgrade dist
   become: yes
   apt: upgrade=dist
+
+- name: detect already installed foreign architectures
+  command: dpkg --print-foreign-architectures
+  register: dpkg_foreign_architectures
+  changed_when: False
+
+# https://wiki.debian.org/Multiarch/HOWTO
+- name: enable i386 architecture (multiarch support)
+  become: yes
+  command: dpkg --add-architecture i386
+  notify: update packages cache
+  when: "'i386' not in dpkg_foreign_architectures.stdout_lines"
