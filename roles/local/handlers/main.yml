@@ -1,6 +1,8 @@
 ---
 - name: update java version
-  debug: msg="Should run update-java-alternatives"
+  become: yes
+  # TODO: convert a script to ansible module or replace with ansible actions
+  script: scripts/generate-jinfo.sh jdk{{ jdk_version }} creates=/usr/lib/jvm/.jdk{{ jdk_version }}.jinfo
 
 - name: update packages cache
   become: yes
