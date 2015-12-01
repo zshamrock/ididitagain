@@ -12,3 +12,4 @@
 - include: atom.yml tags=dev,atom
 - include: chrome.yml tags=packages,chrome
 - include: hipchat.yml tags=packages,dev  
+- include: idea.yml tags=idea,dev  

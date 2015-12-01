@@ -1,0 +1,6 @@
+---
+- name: install IntelliJ IDEA
+  become: yes
+  shell: mkdir -p {{ idea_path }} && wget -O - http://download.jetbrains.com/idea/ideaIU-{{ idea_version }}.tar.gz | tar -C {{ idea_path }} --strip-components=1 -xzf -
+  args:
+    creates: "{{ idea_path }}"
