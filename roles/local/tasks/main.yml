@@ -13,3 +13,4 @@
 - include: chrome.yml tags=packages,chrome
 - include: hipchat.yml tags=packages,dev  
 - include: idea.yml tags=idea,dev  
+- include: docker.yml tags=packages,dev,docker
