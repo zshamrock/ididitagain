@@ -10,3 +10,12 @@
 - name: install docker engine      
   become: yes
   apt: name=docker-engine state=present
+
+- name: add docker group
+  become: yes
+  group: name=docker system=yes state=present    
+
+- name: add current user into docker group
+  become: yes
+  user: name={{ ansible_env.USER }} groups=docker append=yes state=present
+  notify: restart docker    
