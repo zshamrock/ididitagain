@@ -14,3 +14,5 @@
 - include: hipchat.yml tags=packages,dev  
 - include: idea.yml tags=idea,dev  
 - include: docker.yml tags=packages,dev,docker
+- include: permissions.yml tags=permissions  
+- include: clojure.yml tags=dev,clojure  

@@ -1,0 +1,4 @@
+---
+- name: add user into staff group
+  become: yes
+  user: name={{ ansible_env.USER }} groups=staff append=yes state=present
