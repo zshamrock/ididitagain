@@ -1,4 +1,5 @@
 altercation/vim-colors-solarized
+avakarev/vim-watchdog
 bling/vim-airline
 cange/vim-theme-bronkow
 chmllr/elrodeo-colorscheme
