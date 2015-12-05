@@ -1,0 +1,5 @@
+if [ -z $TMUX ]; then
+    printf "Running tmux...\n"
+    tmux
+    printf "Tmux session was closed!\n"
+fi

@@ -6,3 +6,10 @@
     - .profile 
     - .gitignore
     - .vimrc
+    - .bash_aliases  
+
+- name: assembled all bashrc fragments
+  assemble: src={{ role_path }}/files/.bashrc.d dest={{ ansible_env.HOME }}/.bashrc.assemble delimiter="#######"
+
+- name: apply assembled file
+  lineinfile: dest={{ ansible_env.HOME }}/.bashrc line=". .bashrc.assemble" insertafter=EOF state=present

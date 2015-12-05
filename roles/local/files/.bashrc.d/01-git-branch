@@ -1,0 +1,4 @@
+# print current git branch on the bash prompt
+if [ "\$(type -t __git_ps1)" ]; then
+    PS1="\$(__git_ps1 '(%s) ')$PS1"
+fi
