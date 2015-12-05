@@ -1,4 +1,5 @@
 ---
+- include: permissions.yml tags=permissions  
 - include: apt.yml tags=apt
 - include: dot-files.yml tags=dot-files
 - include: gnome-config.yml tags=gnome
@@ -14,5 +15,4 @@
 - include: hipchat.yml tags=packages,dev  
 - include: idea.yml tags=idea,dev  
 - include: docker.yml tags=packages,dev,docker
-- include: permissions.yml tags=permissions  
 - include: clojure.yml tags=dev,clojure  

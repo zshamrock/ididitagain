@@ -19,3 +19,27 @@
   become: yes
   user: name={{ ansible_env.USER }} groups=docker append=yes state=present
   notify: restart docker    
+
+- set_fact: docker_machine_zip=docker-machine_linux-amd64.zip
+
+- name: collect information whether docker-machine is installed
+  stat: path=/usr/local/bin/docker-machine  
+  register: docker_machine    
+  changed_when: False
+
+- name: install docker machine
+  get_url: url=https://github.com/docker/machine/releases/download/v0.5.2/{{ docker_machine_zip }} dest=/tmp
+  when: not docker_machine.stat.exists
+
+- name: unzip docker-machine
+  unarchive: src=/tmp/{{ docker_machine_zip }} dest=/usr/local/bin creates="/usr/local/bin/docker-machine"
+
+- name: create /usr/local/etc/bash_completion.d
+  file: path=/usr/local/etc/bash_completion.d state=directory
+
+- name: install docker-machine bash helper scripts
+  get_url: url={{ item }} dest=/usr/local/etc/bash_completion.d/
+  with_items:
+    - https://raw.githubusercontent.com/docker/machine/master/contrib/completion/bash/docker-machine-prompt.bash
+    - https://raw.githubusercontent.com/docker/machine/master/contrib/completion/bash/docker-machine-wrapper.bash
+    - https://raw.githubusercontent.com/docker/machine/master/contrib/completion/bash/docker-machine.bash
