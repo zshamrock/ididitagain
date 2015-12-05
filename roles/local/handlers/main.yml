@@ -12,4 +12,7 @@
   become: yes
   service: name=docker state=restarted    
 
+- name: install and update vim plugins
+  shell: install-and-update-vim-plugins  
+
 - include: go.yml

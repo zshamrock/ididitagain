@@ -15,6 +15,7 @@
     - keepassx
     - ttf-mscorefonts-installer
     - fonts-inconsolata
+    - exuberant-ctags  
 
 - name: install extra packages
   become: yes

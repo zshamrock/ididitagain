@@ -16,3 +16,4 @@
 - include: idea.yml tags=idea,dev  
 - include: docker.yml tags=packages,dev,docker
 - include: clojure.yml tags=dev,clojure  
+- include: vim.yml tags=vim  

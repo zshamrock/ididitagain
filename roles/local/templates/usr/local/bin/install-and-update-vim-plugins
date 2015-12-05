@@ -1,0 +1,74 @@
+#!/bin/bash
+VIM_PLUGINS_DIR=${HOME}/.vim/bundle
+VIM_PLUGINS_LIST_DIR={{ role_path }}/files
+VIM_PLUGINS_LIST="vim-plugins.txt"
+
+install_new_and_then_update_all_vim_plugins() {
+    cwd=`pwd`
+
+    cd ${VIM_PLUGINS_LIST_DIR}
+    # get the latest updates
+    git pull origin master
+
+    plugins=(`cat ${VIM_PLUGINS_LIST}`)
+
+    mkdir -p ${VIM_PLUGINS_DIR}
+
+    cd ${VIM_PLUGINS_DIR}
+
+    for plugin in "${plugins[@]}"
+    do
+        plugin_name=`echo ${plugin} | cut -f 2 -d /`
+        if [ ! -d ${plugin_name} ]
+        then
+            install_vim_plugin ${plugin}
+        fi
+    done
+
+    update_vim_plugins
+
+    cd ${cwd}
+}
+
+install_vim_plugin() {
+    plugin=$1
+    info "Installing plugin ${plugin}..."
+    git clone https://github.com/${plugin}.git
+    echo
+}
+
+update_vim_plugins() {
+
+    plugins=(`ls -1 ${VIM_PLUGINS_DIR}`)
+
+    for plugin in "${plugins[@]}"
+    do
+        info "Updating ${plugin} plugin..."
+        cd ${VIM_PLUGINS_DIR}/${plugin}
+        if [ -d .git ]
+        then
+            git pull origin master
+        else
+            warn "Skipping ${plugin}, not a git repository!"
+        fi
+        echo
+    done
+
+   cd ${cwd}
+
+   echo "Done!. Enjoy your day :)"
+}
+
+info() {
+    msg=$1
+    # 2 is green
+    echo "$(tput setab 2)$(tput bold)${msg}$(tput sgr0)"
+}
+
+warn() {
+    msg=$1
+    # 1 is red
+    echo "$(tput setab 1)$(tput bold)${msg}$(tput sgr0)"
+}
+
+install_new_and_then_update_all_vim_plugins

@@ -1,0 +1,25 @@
+#!/bin/bash
+
+CWD=`pwd`
+
+VIM_PLUGINS_LIST_DIR={{ role_path }}/files
+VIM_PLUGINS_LIST=vim-plugins.txt
+
+cd ${VIM_PLUGINS_LIST_DIR}
+
+vim ${VIM_PLUGINS_LIST}
+
+sort ${VIM_PLUGINS_LIST} -o ${VIM_PLUGINS_LIST}
+
+git status | grep -P "modified:\s+${VIM_PLUGINS_LIST}" | wc -l
+
+if [ `git status | grep -P "modified:\s+${VIM_PLUGINS_LIST}" | wc -l` -eq 1 ]
+then
+    git add ${VIM_PLUGINS_LIST}
+    git commit -m "Automatic commit: update list of vim plugins"
+    git push origin master
+
+    install-and-update-vim-plugins
+fi
+
+cd ${CWD}
