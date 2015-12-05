@@ -1,0 +1,9 @@
+[core]
+	excludesfile = {{ ansible_env.HOME }}/.gitignore
+	autocrlf = input
+[merge]
+	ff = false
+[color]
+	ui = auto
+[push]
+	default = simple
