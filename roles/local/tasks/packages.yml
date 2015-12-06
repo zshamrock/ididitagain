@@ -16,6 +16,7 @@
     - ttf-mscorefonts-installer
     - fonts-inconsolata
     - exuberant-ctags  
+    - xtrlock  
 
 - name: install extra packages
   become: yes
