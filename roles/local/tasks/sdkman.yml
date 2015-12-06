@@ -1,0 +1,16 @@
+---
+- name: download and install sdkman
+  shell: curl -s get.sdkman.io | bash
+  args:
+    creates: "{{ ansible_env.HOME }}/.sdkman"
+
+- name: enable install without asking
+  replace: dest={{ ansible_env.HOME }}/.sdkman/etc/config regexp="sdkman_auto_answer=false" replace="sdkman_auto_answer=true"
+
+- name: install sdk managed tools
+  shell: executable=/bin/bash source "{{ ansible_env.HOME }}/.sdkman/bin/sdkman-init.sh" && sdk install {{ item.candidate }} {{ item.version }} creates={{ ansible_env.HOME }}/.sdkman/candidates/{{ item.candidate }}/{{ item.version }}
+  with_items:
+    - { candidate: "groovy", version: "{{ groovy_version }}" }    
+    - { candidate: "groovyserv", version: "{{ groovyserv_version }}" }    
+    - { candidate: "gradle", version: "{{ gradle_version }}" }    
+    - { candidate: "maven", version: "{{ maven_version }}" }    

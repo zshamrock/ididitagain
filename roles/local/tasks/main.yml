@@ -18,3 +18,4 @@
 - include: clojure.yml tags=dev,clojure  
 - include: vim.yml tags=vim  
 - include: maven.yml tags=dev,maven  
+- include: sdkman.yml tags=dev,sdkman  

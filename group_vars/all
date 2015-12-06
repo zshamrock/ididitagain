@@ -16,3 +16,6 @@ idea_version: 15.0.1
 idea_path: /usr/local/idea{{ idea_version }}
 
 maven_version: 3.3.9
+groovy_version: 2.4.5
+groovyserv_version: 1.0.0
+gradle_version: 2.9
