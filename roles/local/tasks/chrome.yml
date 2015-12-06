@@ -10,3 +10,9 @@
 - name: install chrome
   become: yes
   apt: name=google-chrome-stable state=present
+
+- name: remove google chrome repo as /etc/cron.daily/google-chrome will create the one anyway with the same path and apt-get update will warn about duplicate entries found
+  become: yes
+  file: path=/etc/apt/sources.list.d/dl_google_com_linux_chrome_deb.list state=absent
+  notify: update packages cache      
+
