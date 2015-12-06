@@ -12,7 +12,7 @@
   assemble: src={{ role_path }}/files/.bashrc.d dest={{ ansible_env.HOME }}/.bashrc.assemble delimiter="#######"
 
 - name: apply bashrc assembled file
-  lineinfile: dest={{ ansible_env.HOME }}/.bashrc line=". .bashrc.assemble" insertafter=EOF state=present
+  lineinfile: dest={{ ansible_env.HOME }}/.bashrc line=". ${HOME}/.bashrc.assemble" insertafter=EOF state=present
 
 - name: assemble all profile fragments
   assemble: src={{ role_path }}/files/.profile.d dest={{ ansible_env.HOME }}/.profile.assemble delimiter="#######"
