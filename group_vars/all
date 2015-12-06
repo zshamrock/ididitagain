@@ -19,3 +19,5 @@ maven_version: 3.3.9
 groovy_version: 2.4.5
 groovyserv_version: 1.0.0
 gradle_version: 2.9
+
+docker_compose_version: 1.5.2
