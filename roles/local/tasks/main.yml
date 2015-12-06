@@ -17,3 +17,4 @@
 - include: docker.yml tags=packages,dev,docker
 - include: clojure.yml tags=dev,clojure  
 - include: vim.yml tags=vim  
+- include: maven.yml tags=dev,maven  

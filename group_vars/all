@@ -14,3 +14,5 @@ go_root: /usr/local/go
 
 idea_version: 15.0.1
 idea_path: /usr/local/idea{{ idea_version }}
+
+maven_version: 3.3.9

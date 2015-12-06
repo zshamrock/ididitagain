@@ -1,0 +1,5 @@
+java_version=`java -version 2>&1 | head -n 1 | awk -F '"' '{print $2}'`
+echo "Using Java version ${java_version}"
+export JAVA_HOME=/usr/lib/jvm/jdk${java_version}
+JRE_HOME=$JAVA_HOME/jre
+export JRE_HOME

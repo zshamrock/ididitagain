@@ -1,0 +1,8 @@
+---
+- name: download and install maven
+  shell: wget -O - http://apache.cs.uu.nl/maven/maven-3/{{ maven_version }}/binaries/apache-maven-{{ maven_version }}-bin.tar.gz | tar -C /usr/local -xzf -
+  args:
+    creates: /usr/local/apache-maven-{{ maven_version }}
+
+- name: create symlink to the latest maven
+  file: src=/usr/local/apache-maven-{{ maven_version }} path=/usr/local/maven state=link

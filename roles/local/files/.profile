@@ -20,12 +20,5 @@ fi
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
-export GOPATH=$HOME/go
-export GOROOT=/usr/local/go
-export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
 
-java_version=`java -version 2>&1 | head -n 1 | awk -F '"' '{print $2}'`
-echo "Using Java version ${java_version}"
-export JAVA_HOME=/usr/lib/jvm/jdk${java_version}
-JRE_HOME=$JAVA_HOME/jre
-export JRE_HOME
+. .profile.assemble
