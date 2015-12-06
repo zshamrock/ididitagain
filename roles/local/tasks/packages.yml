@@ -31,3 +31,7 @@
     - xclip
     - xsel
     - python-gpgme # recommended for dropbox
+    - cpufrequtils  
+    - gpaste
+    - gnome-shell-extensions-gpaste   
+    - gnome-shell-extension-weather  
