@@ -36,3 +36,7 @@
     - gpaste
     - gnome-shell-extensions-gpaste   
     - gnome-shell-extension-weather  
+    - winetricks
+    - wine64  
+    - wine  
+    - mono-runtime  
