@@ -13,4 +13,3 @@
     - { candidate: "groovy", version: "{{ groovy_version }}" }    
     - { candidate: "groovyserv", version: "{{ groovyserv_version }}" }    
     - { candidate: "gradle", version: "{{ gradle_version }}" }    
-    - { candidate: "maven", version: "{{ maven_version }}" }    
