@@ -1,0 +1,18 @@
+---
+# for now could be run only once
+
+- name: download timeleft
+  get_url: url=http://www.timeleft.info/download/timeleft.exe dest=/tmp/timeleft.exe
+  when: False    
+
+- name: run wine to install timeleft
+  command: wine /tmp/timeleft.exe
+  when: False    
+
+# here I download not the latest version, as there is a know issue with registration using the latest version,
+# so have to download this one, register, and then upgrade to the latest version manually
+- name: download acemoney
+  get_url: url=http://www.mechcad.net/downloads/win95/AceMoneySetup.exe dest=/tmp/acemoney.exe
+
+- name: run wine to install acemoney
+  command: wine /tmp/acemoney.exe
