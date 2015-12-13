@@ -7,6 +7,8 @@
     - .gitignore
     - .vimrc
     - .bash_aliases  
+    - .gradle/gradle.properties
+    - .lein/profiles.clj  
 
 - name: assemble all bashrc fragments
   assemble: src={{ role_path }}/files/.bashrc.d dest={{ ansible_env.HOME }}/.bashrc.assemble delimiter="#######"
