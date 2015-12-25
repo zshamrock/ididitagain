@@ -1,0 +1,5 @@
+---
+- include: "{{ role_path }}/tasks/ext/deb-install.yml"
+  vars:
+    packages:
+      - { url: "https://www.dropbox.com/download?dl=packages/debian/dropbox_2015.10.28_amd64.deb", name: "dropbox" }

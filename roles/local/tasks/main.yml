@@ -1,24 +1,7 @@
 ---
-- include: permissions.yml tags=permissions  
-- include: apt.yml tags=apt
-- include: dot-files.yml tags=dot-files
-- include: gnome-config.yml tags=gnome
-- include: packages.yml tags=packages
-- include: deb-packages.yml tags=deb-packages
-- include: git-config.yml tags=git
-- include: alternatives.yml
-- include: track-os-config.yml
-- include: jdk.yml tags=jdk
-- include: go.yml tags=dev
-- include: atom.yml tags=dev,atom
-- include: chrome.yml tags=packages,chrome
-- include: hipchat.yml tags=packages,dev  
-- include: idea.yml tags=idea,dev  
-- include: docker.yml tags=packages,dev,docker
-- include: clojure.yml tags=dev,clojure  
-- include: vim.yml tags=vim  
-- include: maven.yml tags=dev,maven  
-- include: sdkman.yml tags=dev,sdkman  
-- include: wine-packages.yml tags=wine
-- include: tools.yml tags=dev,tools  
-- include: gnome-shell-extensions.yml tags=gnome  
+- include: gnome/main.yml tags=gnome
+- include: packages/main.yml tags=packages
+- include: system/main.yml tags=system
+- include: media/main.yml tags=media
+- include: productivity/main.yml tags=productivity  
+- include: dev/main.yml tags=dev

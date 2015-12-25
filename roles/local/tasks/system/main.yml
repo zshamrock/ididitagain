@@ -1,0 +1,7 @@
+---
+- include: track-os-config.yml
+- include: apt.yml tags=apt
+- include: permissions.yml tags=permissions  
+- include: dot-files.yml tags=dot-files
+- include: vim.yml tags=vim  
+- include: alternatives.yml tags=alternatives

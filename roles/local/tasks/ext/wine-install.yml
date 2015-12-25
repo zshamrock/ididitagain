@@ -1,0 +1,13 @@
+---
+- name: "{{ package.name }} package installed?"
+  stat: path="{{ package.path }}"
+  register: wine_package_status
+  changed_when: False
+      
+- name: download {{ package.name }}
+  get_url: url={{ package.url }} dest=/tmp/{{ package.name }}.exe
+  when: not wine_package_status.stat.exists
+
+- name: run wine to install {{ package.name }}
+  command: wine /tmp/{{ package.name }}.exe
+  when: not wine_package_status.stat.exists

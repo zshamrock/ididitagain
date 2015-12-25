@@ -1,6 +1,6 @@
 ---
 - name: copy default .gitconfig
-  template: src=.gitconfig dest={{ ansible_env.HOME }} force=no
+  template: src={{ role_path }}/templates/.gitconfig dest={{ ansible_env.HOME }} force=no
 
 - name: collect git config --global properties
   command: git config --global --get {{ item }}

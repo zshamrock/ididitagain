@@ -1,0 +1,12 @@
+---
+- name: add {{ package.name }} signature key
+  become: yes
+  apt_key: url={{ package.key }} state=present
+
+- name: add {{ package.name }} repository
+  become: yes
+  apt_repository: repo="{{ package.repo }}" update_cache=yes state=present
+
+- name: install {{ package.name }}
+  become: yes
+  apt: name={{ package.name }} state=present

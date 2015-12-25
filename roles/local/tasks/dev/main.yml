@@ -1,0 +1,11 @@
+---
+- include: git-config.yml tags=git
+- include: jdk.yml tags=jdk
+- include: go.yml tags=go
+- include: atom.yml tags=atom
+- include: idea.yml tags=idea
+- include: docker.yml tags=docker
+- include: clojure.yml tags=clojure  
+- include: maven.yml tags=maven  
+- include: sdkman.yml tags=sdkman  
+- include: tools.yml tags=tools

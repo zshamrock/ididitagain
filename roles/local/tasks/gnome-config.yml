@@ -1,5 +1,0 @@
----
-# just put the corresponding config directory into files/.config
-- name: setup applications and gnome config
-  file: src={{ role_path }}/files/.config/{{ item }} dest={{ ansible_env.HOME }}/.config/{{ item }} state=link
-  with_lines: ls -1 {{ role_path }}/files/.config
