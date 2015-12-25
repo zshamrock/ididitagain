@@ -1,0 +1,13 @@
+---
+# https://www.spotify.com/uk/download/linux/
+- name: add the spotify repository signing key to be able to verify downloaded packages
+  become: yes
+  apt_key: keyserver=hkp://keyserver.ubuntu.com:80 id=BBEBDCB318AD50EC6865090613B00F1FD2C19886 state=present
+
+- name: add the spotify repository
+  become: yes
+  apt_repository: repo="deb http://repository.spotify.com stable non-free" update_cache=yes state=present 
+
+- name: install spotify      
+  become: yes
+  apt: name=spotify-client state=present
