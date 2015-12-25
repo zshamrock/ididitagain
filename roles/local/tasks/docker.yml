@@ -34,15 +34,13 @@
 - name: unzip docker-machine
   unarchive: src=/tmp/{{ docker_machine_zip }} dest=/usr/local/bin creates="/usr/local/bin/docker-machine"
 
-- name: create /usr/local/etc/bash_completion.d
-  file: path=/usr/local/etc/bash_completion.d state=directory
-
 - name: install docker-machine bash helper scripts
-  get_url: url={{ item }} dest=/usr/local/etc/bash_completion.d/
+  become: yes
+  get_url: url=https://raw.githubusercontent.com/docker/machine/master/contrib/completion/bash/{{ item }}.bash dest=/etc/bash_completion.d/{{ item }} force=yes
   with_items:
-    - https://raw.githubusercontent.com/docker/machine/master/contrib/completion/bash/docker-machine-prompt.bash
-    - https://raw.githubusercontent.com/docker/machine/master/contrib/completion/bash/docker-machine-wrapper.bash
-    - https://raw.githubusercontent.com/docker/machine/master/contrib/completion/bash/docker-machine.bash
+    - docker-machine-prompt
+    - docker-machine-wrapper
+    - docker-machine
 
 - name: install docker-compose
   get_url: url=https://github.com/docker/compose/releases/download/{{ docker_compose_version }}/docker-compose-Linux-x86_64 dest=/usr/local/bin/docker-compose mode=ug+x
