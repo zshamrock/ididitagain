@@ -22,4 +22,3 @@
 - include: wine-packages.yml tags=wine
 - include: tools.yml tags=dev,tools  
 - include: gnome-shell-extensions.yml tags=gnome  
-- include: spotify.yml tags=spotify,media

@@ -7,6 +7,7 @@
     - { url: "https://atom.io/download/deb", name: "atom"} 
     - { url: "https://www.dropbox.com/download?dl=packages/debian/dropbox_2015.10.28_amd64.deb", name: "dropbox" }
     - { url: "http://www.skype.com/go/getskype-linux-deb-32", name: "skype"}
+    - { url: "http://repository-origin.spotify.com/pool/non-free/s/spotify-client/spotify-client_1.0.19.106.gb8a7150f_amd64.deb", name: "spotify" }
   register: deb_packages_status
   ignore_errors: True
   changed_when: False
