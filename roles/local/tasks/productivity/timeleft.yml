@@ -1,7 +1,0 @@
----
-- include: "{{ role_path }}/tasks/ext/wine-install.yml"
-  vars:
-    package:
-      name: timeleft
-      path: "{{ ansible_env.HOME }}/.wine/drive_c/Program Files/TimeLeft3/TimeLeft.exe"    
-      url: http://www.timeleft.info/download/timeleft.exe dest=/tmp/timeleft.exe

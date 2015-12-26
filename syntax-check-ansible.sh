@@ -1,2 +1,2 @@
 #!/bin/bash
-ansible-playbook site.yml --syntax-check -i hosts
+ansible-playbook site.yml -i hosts --syntax-check

@@ -1,7 +1,0 @@
----
-- include: gnome/main.yml tags=gnome
-- include: packages/main.yml tags=packages
-- include: system/main.yml tags=system
-- include: media/main.yml tags=media
-- include: productivity/main.yml tags=productivity  
-- include: dev/main.yml tags=dev

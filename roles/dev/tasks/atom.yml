@@ -1,0 +1,15 @@
+---
+- include: "{{ common_tasks }}/deb-install.yml"
+  vars:
+    packages:
+      - { url: "https://atom.io/download/deb", name: "atom"}    
+
+- name: collect stat about existing atom packages
+  stat: path={{ ansible_env.HOME }}/.atom/packages/{{ item }}
+  with_lines: cat {{ role_path }}/files/atom-packages.txt
+  register: atom_packages
+
+- name: install missing atom packages 
+  command: apm install {{ item.item }} 
+  with_items: "{{ atom_packages.results }}"
+  when: not item.stat.exists

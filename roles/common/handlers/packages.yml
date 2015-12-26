@@ -1,0 +1,4 @@
+---
+- name: update packages cache
+  become: yes
+  apt: update_cache=yes

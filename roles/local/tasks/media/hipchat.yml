@@ -1,7 +1,0 @@
----
-- include: "{{ role_path }}/tasks/ext/apt-install.yml"
-  vars:
-    package:
-      name: hipchat
-      key: https://www.hipchat.com/keys/hipchat-linux.key    
-      repo: "deb http://downloads.hipchat.com/linux/apt stable main"    

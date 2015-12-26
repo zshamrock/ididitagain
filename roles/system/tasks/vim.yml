@@ -1,0 +1,16 @@
+---
+- name: copy .vim
+  copy: src=.vim/autoload dest={{ ansible_env.HOME }}
+
+- name: download the latest pathogen
+  get_url: url=https://tpo.pe/pathogen.vim dest={{ ansible_env.HOME }}/.vim/autoload/pathogen.vim force=yes
+
+- name: link vim spell
+  file: src={{ role_path }}/files/.vim/spell dest={{ ansible_env.HOME }}/.vim/spell state=link
+
+- name: copy vim plugins management helper scripts
+  template: src={{ item }} dest=/usr/local/bin mode=ug+x force=yes
+  with_items:
+    - usr/local/bin/install-and-update-vim-plugins
+    - usr/local/bin/vim-plugins    
+  notify: install and update vim plugins    

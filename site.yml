@@ -1,4 +1,12 @@
 ---
 - hosts: localhost
+  vars:
+    common_tasks: "{{ inventory_dir }}/roles/common/tasks"
   roles:
-    - local
+    - common  
+    - { role: gnome, tags: ["gnome"]}
+    - { role: packages, tags: ["packages"]}
+    - { role: system, tags: ["system"]}
+    - { role: media, tags: ["media"]}
+    - { role: productivity, tags: ["productivity"]}
+    - { role: dev, tags: ["dev"]}

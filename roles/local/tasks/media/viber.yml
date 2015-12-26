@@ -1,5 +1,0 @@
----
-- include: "{{ role_path }}/tasks/ext/deb-install.yml"
-  vars:
-    packages:
-      - { url: "http://download.cdn.viber.com/cdn/desktop/Linux/viber.deb", name: "viber" }

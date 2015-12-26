@@ -1,5 +1,0 @@
----
-- include: "{{ role_path }}/tasks/ext/deb-install.yml"
-  vars:
-    packages:
-      - { url: "http://www.skype.com/go/getskype-linux-deb-32", name: "skype"}
