@@ -1,6 +1,6 @@
 ## Debian automation with Ansible
 
-Automate Debian OS on laptop:
+Automate Debian OS:
 
 - install and setup system packages
 - configure dot files
@@ -24,15 +24,15 @@ playbook: site.yml
 Tags are nicely grouped by high level roles, which are (and in turn include lower granularity tags):
 
 - dev
-  [git, jdk, go, atom, idea, docker, clojure, maven, sdkman, tools]
+  - git, jdk, go, atom, idea, docker, clojure, maven, sdkman, tools
 - gnome
 - media
-  [dropbox, skype, slack, spotify, viber, hipchat]
+  - dropbox, skype, slack, spotify, viber, hipchat
 - packages
-  [chrome]
+  - chrome
 - productivity
 - system
-  [apt, permissions, dot-files, vim, alternatives]
+  - apt, permissions, dot-files, vim, alternatives
 
 So, either:
 
