@@ -9,7 +9,7 @@ Automate Debian OS:
 - install various "media" tools, like dropbox, spotify, slack and others
 - and many more
 
-[Demo](https://goo.gl/mLw1mP")
+[Demo](https://goo.gl/mLw1mP)
 
 ### Available tags
 
