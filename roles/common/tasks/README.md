@@ -1,4 +1,4 @@
-Existing tasks here are different ways to install software by:
+Existing tasks here are different ways to install software:
 
 - by downloading a deb package from internet (only if it has not been already installed) and install it
 - add a custom apt repository, signature key, and install the package from the repository 
