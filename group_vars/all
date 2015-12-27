@@ -18,6 +18,8 @@ idea_path: /usr/local/idea{{ idea_version }}
 maven_version: 3.3.9
 groovy_version: 2.4.5
 groovyserv_version: 1.0.0
+
+# version without quotes like 2.10, for some reason sdkman installs 2.1 instead then
 gradle_version: "2.10"
 
 docker_compose_version: 1.5.2
