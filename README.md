@@ -42,6 +42,13 @@ So, either:
 - or `./run-all.sh --tags [one of high level group]`, like `dev`, if only partial "role" is necessary, 
 - or `./run-all.sh --tags [lower granularity tags]`, like `vim` if only specific tags are required (can specify multiple separated by commas, like `vim,jdk`, for example)
 
+### Variables
+
+All variables used by project are defined in [group_vars/all](https://github.com/zshamrock/ididitagain/blob/master/group_vars/all).
+They control versions, and application specific settings for the applications and tools.
+
+**The only one variable which you always want to changes is**: `me[user.name]` and `me[user.email]` to reflect your current full user name and email used in git commits.
+
 ### License
 The MIT License (MIT)
 
