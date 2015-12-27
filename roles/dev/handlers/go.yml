@@ -1,13 +1,12 @@
 ---
 - name: chmod GOROOT
   become: yes
-  file: owner={{ ansible_env.USER }} group={{ ansible_env.USER }} path={{ go_root}} recurse=yes state=directory
+  file: owner={{ ansible_env.USER }} group={{ ansible_env.USER }} path=/usr/local/go{{ go_version }} recurse=yes state=directory
 
-- name: add GOPATH into .profile
-  lineinfile: dest={{ ansible_env.HOME }}/.profile line="export GOPATH={{ go_path }}" state=present
+- name: unlink GOROOT
+  become: yes 
+  file: path=/usr/local/go state=absent
 
-- name: add GOROOT into .profile
-  lineinfile: dest={{ ansible_env.HOME }}/.profile line="export GOROOT={{ go_root }}" state=present
-
-- name: add go bin into .profile
-  lineinfile: dest={{ ansible_env.HOME }}/.profile line="export PATH=$PATH:{{ go_root }}/bin:{{ go_path }}/bin" state=present
+- name: link GOROOT
+  become: yes
+  file: src=/usr/local/go{{ go_version }} dest=/usr/local/go state=link

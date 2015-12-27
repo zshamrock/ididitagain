@@ -1,11 +1,16 @@
 ---
+- debug: var=go_version
+
+- name: create Go lang ROOT directory
+  become: yes
+  file: path=/usr/local/go{{ go_version }} state=directory
+
 - name: install Go lang
   become: yes
-  shell: wget -O - --quiet https://storage.googleapis.com/golang/go{{ go_version }}.linux-amd64.tar.gz | tar -C /usr/local -xzf -
+  shell: wget -O - --quiet https://storage.googleapis.com/golang/go{{ go_version }}.linux-amd64.tar.gz | tar -C /usr/local/go{{ go_version }} --strip-components=1 -xzf -
   args:
-    creates: "{{ go_root }}"
+    creates: /usr/local/go{{ go_version }}/bin/go
   notify: 
     - chmod GOROOT
-    - add GOPATH into .profile
-    - add GOROOT into .profile
-    - add go bin into .profile
+    - unlink GOROOT
+    - link GOROOT  

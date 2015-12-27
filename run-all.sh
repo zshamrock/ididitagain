@@ -1,2 +1,2 @@
 #!/bin/bash
-ansible-playbook site.yml -i hosts --ask-become-pass $@
+ansible-playbook site.yml -i hosts --ask-become-pass --flush-cache $@
