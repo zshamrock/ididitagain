@@ -1,3 +1,4 @@
 ---
 - include: packages.yml
 - include: chrome.yml tags=chrome
+- include: screencast.yml tags=screencast  

@@ -1,0 +1,14 @@
+---
+- name: install screencast related packages
+  become: yes
+  apt: name={{ item }} state=present
+  with_items:
+    - byzanz  
+    - imagemagick
+    - mplayer2
+    - gtk-recordmydesktop
+    - gifsicle
+    - kazam  
+    - vokoscreen  
+    - xdotool  
+
