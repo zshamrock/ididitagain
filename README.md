@@ -4,10 +4,12 @@ Automate Debian OS:
 
 - install and setup system packages
 - configure dot files
-- install and setup everything ready for development: java, clojure, go, docker, git, maven and others
+- install and setup everything ready for development: java, clojure, go, docker, git, idea, maven and others
 - install essential productivity tools
 - install various "media" tools, like dropbox, spotify, slack and others
-- and many more ...
+- and many more
+
+[Demo](https://goo.gl/mLw1mP")
 
 ### Available tags
 
