@@ -11,6 +11,8 @@ Automate Debian OS:
 
 ![Demo](https://raw.githubusercontent.com/zshamrock/ididitagain/master/demo/demo.gif)
 
+Read more about [Debian automation with Ansible](http://akazlou.com/posts/2015-12-27-debian-automation-with-ansible.html).
+
 ### Available tags
 
 ```
