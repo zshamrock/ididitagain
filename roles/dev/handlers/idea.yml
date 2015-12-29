@@ -1,0 +1,11 @@
+---
+- name: unlink idea
+  become: yes
+  file: path=/usr/local/idea state=absent
+
+- name: link idea
+  become: yes
+  file: src={{ idea_path }} dest=/usr/local/idea state=link
+
+- name: add idea desktop entry into gnome favorite-apps      
+  shell: gsettings set org.gnome.shell favorite-apps `gsettings get org.gnome.shell favorite-apps | tr \' \" | jq -c '. + ["idea.desktop"]' | tr \" \'`

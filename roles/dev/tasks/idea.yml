@@ -1,6 +1,22 @@
 ---
+- name: create latest idea directory
+  become: yes
+  file: path={{ idea_path }} state=directory
+
 - name: install IntelliJ IDEA
   become: yes
-  shell: mkdir -p {{ idea_path }} && wget -O - http://download.jetbrains.com/idea/ideaIU-{{ idea_version }}.tar.gz | tar -C {{ idea_path }} --strip-components=1 -xzf -
+  shell: wget -O - http://download.jetbrains.com/idea/ideaIU-{{ idea_version }}.tar.gz | tar -C {{ idea_path }} --strip-components=1 -xzf -
   args:
-    creates: "{{ idea_path }}"
+    creates: "{{ idea_path }}/bin/idea.sh"
+  notify:
+   - unlink idea
+   - link idea  
+
+# http://freedesktop.org/wiki/Specifications/desktop-entry-spec/
+- name: install idea.desktop
+  become: yes
+  shell: desktop-file-install {{ role_path }}/files/usr/share/applications/idea.desktop creates=/usr/share/applications/idea.desktop
+  notify: 
+    - add idea desktop entry into gnome favorite-apps
+    - update desktop database    
+

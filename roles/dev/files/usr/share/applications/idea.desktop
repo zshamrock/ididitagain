@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=IntelliJ IDEA
+Icon=/usr/local/idea/bin/idea.png
+Exec="/usr/local/idea/bin/idea.sh" %f
+Comment=Develop with pleasure!
+Categories=Development;IDE;
+Terminal=false
+StartupWMClass=IntelliJ IDEA

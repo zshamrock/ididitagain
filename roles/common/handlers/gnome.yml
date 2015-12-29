@@ -1,0 +1,4 @@
+---
+- name: update desktop database
+  become: yes
+  command: update-desktop-database    
