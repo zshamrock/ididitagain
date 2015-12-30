@@ -5,3 +5,4 @@
 - include: dot-files.yml tags=dot-files
 - include: vim.yml tags=vim  
 - include: alternatives.yml tags=alternatives
+- include: locale.yml tags=locale

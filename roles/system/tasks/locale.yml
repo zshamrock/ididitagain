@@ -1,0 +1,12 @@
+---
+# file could modified "manually" with help of dpkg-reconfigure locales as well
+- name: reconfigure locales
+  become: yes
+  file: src={{ role_path }}/files/etc/locale.gen dest=/etc/locale.gen force=yes state=link
+  notify: generate locale    
+
+# modifies /etc/default/locale
+- name: update LC_TIME to en_GB.UTF-8 to have Monday as a first day of week      
+  become: yes
+  command: update-locale LC_TIME="en_GB.UTF-8"
+  when: ansible_env.LC_TIME != "en_GB.UTF-8"

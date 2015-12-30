@@ -1,2 +1,3 @@
 ---
 - include: vim.yml  
+- include: locale.yml
