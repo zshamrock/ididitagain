@@ -7,4 +7,4 @@ Exec="/usr/local/idea/bin/idea.sh" %f
 Comment=Develop with pleasure!
 Categories=Development;IDE;
 Terminal=false
-StartupWMClass=IntelliJ IDEA
+StartupWMClass=jetbrains-idea
