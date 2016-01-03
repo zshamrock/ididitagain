@@ -1,0 +1,5 @@
+---
+# depends on backports.yml
+- name: install libreoffice from backports
+  become: yes
+  apt: name=libreoffice default_release=jessie-backports state=latest

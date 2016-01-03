@@ -1,0 +1,5 @@
+---
+- name: enable backports
+  become: yes
+  file: src={{ role_path }}/files/backports.list dest=/etc/apt/sources.list.d/backports.list state=link
+  notify: update packages cache

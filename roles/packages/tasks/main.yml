@@ -2,3 +2,5 @@
 - include: packages.yml
 - include: chrome.yml tags=chrome
 - include: screencast.yml tags=screencast  
+- include: backports.yml tags=backports
+- include: libreoffice.yml tags=libreoffice
