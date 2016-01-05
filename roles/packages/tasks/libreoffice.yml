@@ -3,3 +3,13 @@
 - name: install libreoffice from backports
   become: yes
   apt: name=libreoffice default_release=jessie-backports state=latest
+
+- name: download ru dictionary extension
+  get_url: url=http://extensions.libreoffice.org/extension-center/russian-spellcheck-dictionary.-based-on-works-of-aot-group/pscreleasefolder.2011-09-06.6209385965/0.4.0/dict_ru_ru-aot-0-4-0.oxt dest=/tmp/
+
+- name: install ru dictionary extension      
+  become: yes
+  command: unopkg add --shared /tmp/dict_ru_ru-aot-0-4-0.oxt    
+  register: ru_dict_ext_installed    
+  ignore_errors: True    
+  changed_when: ru_dict_ext_installed.rc == 0
