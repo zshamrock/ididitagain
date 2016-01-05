@@ -6,3 +6,12 @@
     - { repo: "https://github.com/arelange/gnome-shell-extension-hibernate-status.git", uuid: "hibernate-status@dromi" }
     # depth 20 below is in order be able to checkout the specific commit, as it supports Gnome 3.14
     - { repo: "https://github.com/awamper/text-translator.git", uuid: "text_translator@awamper.gmail.com", version: "c23ec09abae050d7ac2695c310e5b697e42ffd7e", depth: 20 }  
+
+- name: install apt gnome-shell extensions
+  become: yes
+  apt: name={{ item }} state=present
+  with_items:
+    - gnome-shell-extensions-gpaste   
+    - gnome-shell-extension-weather  
+    - gnome-shell-pomodoro
+    - gnome-shell-timer  
