@@ -1,7 +1,7 @@
 ---
 - name: create latest idea directory
   become: yes
-  file: path={{ idea_path }} state=directory mode="0775" recurse=yes
+  file: path={{ idea_path }} state=directory group=staff mode="0775" recurse=yes
 
 - name: install IntelliJ IDEA
   become: yes
