@@ -17,6 +17,7 @@
     - fonts-inconsolata
     - exuberant-ctags  
     - xtrlock  
+    - dia  
 
 - name: install extra packages
   become: yes
