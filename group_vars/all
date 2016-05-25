@@ -23,4 +23,4 @@ ant_version: 1.9.6
 # version without quotes like 2.10, for some reason sdkman installs 2.1 instead then
 gradle_version: "2.10"
 
-docker_compose_version: 1.5.2
+docker_compose_version: 1.7.1

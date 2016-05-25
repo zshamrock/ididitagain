@@ -9,7 +9,7 @@
 
 - name: install docker engine      
   become: yes
-  apt: name=docker-engine state=present
+  apt: name=docker-engine state=latest
 
 - name: add docker group
   become: yes
