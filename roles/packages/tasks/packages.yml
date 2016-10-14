@@ -44,4 +44,4 @@
     - scrot  
     - desktop-file-utils # handy for install, edit and validate /usr/share/applications/*.desktop files
     - jq # lightweight and flexible command-line JSON processor  
-    - myspell-ru  
+    - hunspell-ru  
