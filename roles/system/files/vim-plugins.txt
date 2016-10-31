@@ -26,4 +26,3 @@ tpope/vim-surround
 tpope/vim-vinegar
 vim-scripts/paredit.vim
 vim-scripts/taglist.vim
-vim-scripts/YankRing.vim
