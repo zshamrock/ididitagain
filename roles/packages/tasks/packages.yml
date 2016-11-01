@@ -8,9 +8,8 @@
     - vim-gtk
     - terminator
     - tilda
-    - firmware-iwlwifi
     - git
-    - chromium
+    #- chromium
     - tmux
     - keepassx
     - ttf-mscorefonts-installer
@@ -36,7 +35,7 @@
     - cpufrequtils  
     - gpaste
     - winetricks
-    - wine64  
+    - wine1.6-amd64
     - wine  
     - mono-runtime  
     - gimp  

@@ -14,3 +14,5 @@
     - chmod GOROOT
     - unlink GOROOT
     - link GOROOT  
+
+- meta: flush_handlers

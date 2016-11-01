@@ -5,3 +5,5 @@
   args:
     creates: /usr/lib/jvm/jdk{{ jdk_version }}
   notify: update java version
+
+- meta: flush_handlers

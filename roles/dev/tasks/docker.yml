@@ -3,9 +3,15 @@
   become: yes
   apt_key: keyserver=hkp://p80.pool.sks-keyservers.net:80 id=58118E89F3A912897C070ADBF76221572C52609D state=present
 
-- name: add docker deb repository
+- name: add docker debian deb repository
   become: yes
   apt_repository: repo="deb https://apt.dockerproject.org/repo debian-jessie main" update_cache=yes state=present  
+  tags: debian
+
+- name: add docker ubuntu deb repository
+  become: yes
+  apt_repository: repo="deb https://apt.dockerproject.org/repo ubuntu-xenial main" update_cache=yes state=present  
+  tags: ubuntu
 
 - name: install docker engine      
   become: yes
@@ -20,7 +26,9 @@
   user: name={{ ansible_env.USER }} groups=docker append=yes state=present
   notify: restart docker    
 
-- set_fact: docker_machine_zip=docker-machine_linux-amd64.zip
+- meta: flush_handlers
+
+- set_fact: docker_machine_zip=docker-machine-Linux-x86_64
 
 - name: collect information whether docker-machine is installed
   stat: path=/usr/local/bin/docker-machine  
@@ -28,11 +36,8 @@
   changed_when: False
 
 - name: install docker machine
-  get_url: url=https://github.com/docker/machine/releases/download/v0.5.2/{{ docker_machine_zip }} dest=/tmp
+  get_url: url=https://github.com/docker/machine/releases/download/v{{ docker_machine_version }}/{{ docker_machine_zip }} dest=/usr/local/bin/docker-machine
   when: not docker_machine.stat.exists
-
-- name: unzip docker-machine
-  unarchive: src=/tmp/{{ docker_machine_zip }} dest=/usr/local/bin creates="/usr/local/bin/docker-machine"
 
 - name: install docker-machine bash helper scripts
   become: yes

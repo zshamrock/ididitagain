@@ -4,4 +4,4 @@
   args:
     creates: /usr/local/{{ item.name }}
   with_items:
-      - { url: "http://ftp.tudelft.nl/apache//jmeter/binaries/apache-jmeter-2.13.tgz", name: "apache-jmeter-2.13" }      
+      - { url: "http://ftp.tudelft.nl/apache//jmeter/binaries/apache-jmeter-{{ apache_jmeter_version }}.tgz", name: "apache-jmeter-{{ apache_jmeter_version }}" }      

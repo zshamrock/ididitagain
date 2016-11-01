@@ -1,7 +1,13 @@
 ---
-- include: dropbox.yml tags=dropbox
-- include: skype.yml tags=skype
-- include: slack.yml tags=slack
-- include: spotify.yml tags=spotify
-- include: viber.yml tags=viber
-- include: hipchat.yml tags=hipchat
+- include: dropbox.yml 
+  tags: dropbox
+- include: skype.yml 
+  tags: skype
+- include: slack.yml 
+  tags: slack
+- include: spotify.yml 
+  tags: spotify
+- include: viber.yml 
+  tags: viber
+- include: hipchat.yml 
+  tags: hipchat

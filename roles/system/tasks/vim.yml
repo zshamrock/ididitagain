@@ -13,4 +13,7 @@
   with_items:
     - usr/local/bin/install-and-update-vim-plugins
     - usr/local/bin/vim-plugins    
+  become: yes    
   notify: install and update vim plugins    
+
+- meta: flush_handlers      

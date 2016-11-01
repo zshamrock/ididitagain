@@ -7,7 +7,7 @@
   tags: screencast  
 
 - include: backports.yml 
-  tags: backports
+  tags: [backports, debian]
 
 - include: libreoffice.yml 
   tags: libreoffice

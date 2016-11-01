@@ -2,5 +2,5 @@
 - include: "{{ common_tasks }}/deb-install.yml"
   vars:
     packages:
-      - { url: "http://www.xmind.net/xmind/downloads/xmind-7-update1-linux_amd64.deb", name: "xmind" }    
+      - { url: "http://www.xmind.net/xmind/downloads/xmind-7.5-update1-linux_amd64.deb", name: "xmind" }
 
