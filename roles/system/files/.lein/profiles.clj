@@ -5,6 +5,7 @@
                   [lein-oneoff "0.3.1"]
                   [lein-light-nrepl "0.1.0"]
                   [lein-kibit "0.1.2"]
-                  [venantius/ultra "0.3.4"]]
+                  [venantius/ultra "0.3.4"]
+                  [luminus/lein-template "2.9.10.74"]]
         :ultra {:color-scheme :solarized_dark}}}
 
