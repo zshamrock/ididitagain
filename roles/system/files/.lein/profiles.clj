@@ -1,5 +1,5 @@
 {:system 
- {:dependencies [[org.clojure/clojure "1.7.0"]]}
+ {:dependencies [[org.clojure/clojure "1.8.0"]]}
  :user {:plugins [[lein-midje "3.1.3"]
                   [cider/cider-nrepl "0.10.0-SNAPSHOT"]
                   [lein-oneoff "0.3.1"]
