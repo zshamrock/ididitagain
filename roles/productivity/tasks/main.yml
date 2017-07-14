@@ -2,3 +2,4 @@
 - include: timeleft.yml
 - include: acemoney.yml  
 - include: xmind.yml  
+  tags: [xmind]
