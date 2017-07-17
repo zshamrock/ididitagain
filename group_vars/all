@@ -10,7 +10,7 @@ jdk_release: 8u111
 jdk_build: 14
 jdk_archive: "{{ jdk_release }}-b{{ jdk_build }}/jdk-{{ jdk_release }}-linux-x64.tar.gz"
 
-go_version: 1.8
+go_version: 1.8.3
 go_path: $HOME/go
 go_root: /usr/local/go
 
