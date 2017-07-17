@@ -7,7 +7,7 @@ function high_performance() {
 function on_cpu() {
     local cpu=$1
     local cpufreq=`cpufreq-info -c ${cpu} -fm`
-    if [ "${cpufreq}" == "800 MHz" ]; then
+    if [ "${cpufreq}" != "2.40 GHz" ]; then
         sudo cpufreq-set -f 2.40GHz -c ${cpu}
         echo "Set CPU${cpu} to "  `cpufreq-info -c ${cpu} -fm`
     fi
