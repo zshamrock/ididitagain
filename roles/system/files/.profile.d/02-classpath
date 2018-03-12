@@ -1,1 +1,1 @@
-export CLASSPATH=.
+export CLASSPATH=$CLASSPATH.:/usr/local/lib/antlr-{{ antlr_version }}-complete.jar
