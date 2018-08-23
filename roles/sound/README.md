@@ -1,0 +1,11 @@
+https://softfirm.wordpress.com/2018/01/03/dacmagic-xs-v2-for-linux/
+https://r3dux.org/2013/12/how-to-enable-high-quality-audio-in-linux/
+https://opensource.com/life/16/1/hacking-your-linux-computer-better-listening-experience
+https://www.ap-linux.com/documentation/supported-dacs/
+http://www.alsa-project.org/main/index.php/Asoundrc
+https://wiki.gentoo.org/wiki/ALSA
+http://jackaudio.org/faq/routing_alsa.html
+https://github.com/jackaudio/jackaudio.github.com/wiki/WalkThrough_User_PulseOnJack
+https://alsa.opensrc.org/Jack_and_Loopback_device_as_Alsa-to-Jack_bridge
+https://bbs.archlinux.org/viewtopic.php?id=229250
+pavucontrol!
