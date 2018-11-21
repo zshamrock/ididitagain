@@ -11,7 +11,7 @@ jdk_release: 8u{{ jdk_patch_version }}
 jdk_build: "11"
 jdk_archive: "{{ jdk_release }}-b{{ jdk_build }}/512cd62ec5174c3487ac17c61aaa89e8/jdk-{{ jdk_release }}-linux-x64.tar.gz"
 
-go_version: "1.11.1"
+go_version: "1.11.2"
 go_path: $HOME/go
 go_root: /usr/local/go
 
