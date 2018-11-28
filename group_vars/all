@@ -15,7 +15,7 @@ go_version: "1.11.2"
 go_path: $HOME/go
 go_root: /usr/local/go
 
-idea_version: 2018.2.5
+idea_version: 2018.3
 idea_path: /usr/local/idea{{ idea_version }}
 
 maven_version: 3.5.0
