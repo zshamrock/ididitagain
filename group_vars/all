@@ -5,11 +5,12 @@ me:
   user.name: Aliaksandr Kazlou
   user.email: aliaksandr.kazlou@gmail.com
 
-jdk_patch_version: 171
+jdk_patch_version: 191
 jdk_version: 1.8.0_{{ jdk_patch_version }}
 jdk_release: 8u{{ jdk_patch_version }}
-jdk_build: "11"
-jdk_archive: "{{ jdk_release }}-b{{ jdk_build }}/512cd62ec5174c3487ac17c61aaa89e8/jdk-{{ jdk_release }}-linux-x64.tar.gz"
+jdk_build: "12"
+jdk_path_id: 2787e4a523244c269598db4e85c51e0c
+jdk_archive: "{{ jdk_release }}-b{{ jdk_build }}/{{ jdk_path_id }}/jdk-{{ jdk_release }}-linux-x64.tar.gz"
 
 go_version: "1.11.2"
 go_path: $HOME/go
