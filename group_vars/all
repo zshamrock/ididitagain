@@ -28,6 +28,8 @@ antlr_version: 4.7.1
 # version without quotes like 2.10, for some reason sdkman installs 2.1 instead then
 gradle_version: "5.0"
 
+kotlin_version: 1.3.11
+
 docker_compose_version: 1.8.1
 docker_machine_version: 0.8.2
 
