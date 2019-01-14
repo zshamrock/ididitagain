@@ -12,7 +12,7 @@ jdk_build: "12"
 jdk_path_id: 2787e4a523244c269598db4e85c51e0c
 jdk_archive: "{{ jdk_release }}-b{{ jdk_build }}/{{ jdk_path_id }}/jdk-{{ jdk_release }}-linux-x64.tar.gz"
 
-go_version: "1.11.2"
+go_version: "1.11.4"
 go_path: $HOME/go
 go_root: /usr/local/go
 
