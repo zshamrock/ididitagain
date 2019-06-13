@@ -2,7 +2,7 @@
 if [ $# -ne 1 -o $# -ne 2 ]
 then
     echo "Device name is expected! Run 'dmesg' to see the device name."
-	exit 1
+    exit 1
 fi
 if [ $# -eq 1 ]; then
     fstype="vfat"
