@@ -18,8 +18,8 @@ do
 	if [ `grep -i /media/flash$i /etc/mtab | wc -l` -eq 0 ]
 	then
 	    echo "Mounting /media/flash$i..."
-		sudo mount -t ${fstype} -o utf8,gid=staff,umask=007 ${device} "/media/flash$i"
-		break
+        sudo mount -t ${fstype} -o utf8,gid=staff,umask=007 ${device} "/media/flash$i"
+        break
 	fi	
 done
 echo "Flash is successfully mounted )"
