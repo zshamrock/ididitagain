@@ -1,5 +1,5 @@
 #!/bin/bash
-if [[ $# -ne 1 || $# -ne 2 ]]
+if [[ $# -ne 1 && $# -ne 2 ]]
 then
     echo "Device name is expected! Run 'dmesg' to see the device name."
     exit 1
