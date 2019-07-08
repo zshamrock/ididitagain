@@ -1,17 +1,17 @@
 [global_config]
 [keybindings]
-[profiles]
-  [[default]]
-    background_image = None
-    font = Monospace 16
-    background_color = "#002b36"
-    foreground_color = "#839496"
 [layouts]
   [[default]]
     [[[child1]]]
-      type = Terminal
       parent = window0
+      type = Terminal
     [[[window0]]]
-      type = Window
       parent = ""
+      type = Window
 [plugins]
+[profiles]
+  [[default]]
+    background_color = "#002b36"
+    cursor_color = "#839496"
+    font = Monospace 16
+    foreground_color = "#839496"

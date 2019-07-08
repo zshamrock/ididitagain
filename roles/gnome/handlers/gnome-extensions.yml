@@ -1,0 +1,6 @@
+---
+['alternative-status-menu@gnome-shell-extensions.gcampax.github.com', 'native-window-placement@gnome-shell-extensions.gcampax.github.com', 'launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'GPaste@gnome-shell-extensions.gnome.org', 'hibernate-status@dromi', 'text_translator@awamper.gmail.com', 'timer@olebowle.gmx.com', 'pomodoro@arun.codito.in']
+
+ gsettings get org.gnome.shell enabled-extensions
+ ['alternative-status-menu@gnome-shell-extensions.gcampax.github.com', 'native-window-placement@gnome-shell-extensions.gcampax.github.com', 'launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'GPaste@gnome-shell-extensions.gnome.org', 'hibernate-status@dromi', 'text_translator@awamper.gmail.com', 'timer@olebowle.gmx.com', 'pomodoro@arun.codito.in']
+
