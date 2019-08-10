@@ -9,7 +9,7 @@
   file: src={{ role_path }}/files/.vim/spell dest={{ ansible_env.HOME }}/.vim/spell state=link
 
 - name: copy vim plugins management helper scripts
-  template: src={{ item }} dest=/usr/local/bin mode=ug+x force=yes
+  template: src={{ item }} dest=/usr/local/bin mode=ugo+x force=yes
   with_items:
     - usr/local/bin/install-and-update-vim-plugins
     - usr/local/bin/vim-plugins    

@@ -1,7 +1,7 @@
 ---
 - hosts: localhost
   vars:
-    common_tasks: "{{ inventory_dir }}/roles/common/tasks"
+    common_tasks: "{{ ansible_inventory_sources[0] | dirname }}/roles/common/tasks"
   roles:
     - common
     - { role: gnome, tags: ["gnome"] }
@@ -10,3 +10,9 @@
     - { role: media, tags: ["media"] }
     - { role: productivity, tags: ["productivity"] }
     - { role: dev, tags: ["dev"] }
+  tasks:
+    - name: debug vars
+      debug:
+        var: inventory_dir
+      tags:
+      - debug       

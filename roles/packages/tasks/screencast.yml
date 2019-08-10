@@ -5,7 +5,7 @@
   with_items:
     - byzanz  
     - imagemagick
-    - mplayer2
+    - mplayer
     - gtk-recordmydesktop
     - gifsicle
     - kazam  

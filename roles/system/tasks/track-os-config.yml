@@ -5,7 +5,6 @@
     creates: "{{ item }}/.git"
   with_items:
     - ~/.config
-    - ~/.gconf
     - ~/.local
 
 - name: init git for OS config directories (non home)

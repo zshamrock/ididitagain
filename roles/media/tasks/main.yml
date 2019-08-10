@@ -5,7 +5,3 @@
   tags: skype
 - include: slack.yml 
   tags: slack
-- include: viber.yml 
-  tags: viber
-- include: hipchat.yml 
-  tags: hipchat

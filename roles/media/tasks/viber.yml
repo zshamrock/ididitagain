@@ -2,4 +2,4 @@
 - include: "{{ common_tasks }}/deb-install.yml"
   vars:
     packages:
-      - { url: "http://download.cdn.viber.com/cdn/desktop/Linux/viber.deb", name: "viber" }
+      - { url: "https://download.cdn.viber.com/cdn/desktop/Linux/viber.deb", name: "viber" }

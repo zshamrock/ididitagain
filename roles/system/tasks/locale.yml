@@ -9,6 +9,6 @@
 - name: update LC_TIME to en_GB.UTF-8 to have Monday as a first day of week      
   become: yes
   command: update-locale LC_TIME="en_GB.UTF-8"
-  when: ansible_env.LC_TIME != "en_GB.UTF-8"
+  when: False
 
 - meta: flush_handlers      

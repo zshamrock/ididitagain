@@ -31,15 +31,15 @@
     - apt-transport-https # necessary for slack
     - xclip
     - xsel
-    - python-gpgme # recommended for dropbox
+    - python-gpg # recommended for dropbox
     - cpufrequtils  
     - gpaste
     - winetricks
-    - wine1.6-amd64
+    - wine64
     - wine  
     - mono-runtime  
     - gimp  
-    - shutter  
+    - flameshot  
     - scrot  
     - desktop-file-utils # handy for install, edit and validate /usr/share/applications/*.desktop files
     - jq # lightweight and flexible command-line JSON processor  
