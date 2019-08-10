@@ -1,4 +1,4 @@
 export MAVEN_HOME=/usr/local/maven
 export M2_HOME=$MAVEN_HOME
 export PATH=$PATH:$MAVEN_HOME/bin
-export MAVEN_OPTS="-Xms128M -Xmx256M"
+export MAVEN_OPTS="-Xms512M -Xmx1024M"

@@ -8,11 +8,6 @@
   apt_repository: repo="deb https://apt.dockerproject.org/repo debian-buster main" update_cache=yes state=present  
   tags: debian
 
-- name: add docker ubuntu deb repository
-  become: yes
-  apt_repository: repo="deb https://apt.dockerproject.org/repo ubuntu-xenial main" update_cache=yes state=present  
-  tags: ubuntu
-
 - name: install docker engine      
   become: yes
   apt: name=docker-engine state=latest

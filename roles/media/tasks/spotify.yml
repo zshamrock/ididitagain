@@ -1,5 +1,0 @@
----
-- include: "{{ common_tasks }}/deb-install.yml"
-  vars:
-    packages:
-      - { url: "http://repository-origin.spotify.com/pool/non-free/s/spotify-client/spotify-client_1.0.19.106.gb8a7150f_amd64.deb", name: "spotify-client" }    
