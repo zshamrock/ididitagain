@@ -3,5 +3,6 @@
   vars:
     package:
       name: timeleft
-      path: "{{ ansible_env.HOME }}/.wine/drive_c/Program Files/TimeLeft3/TimeLeft.exe"    
-      url: http://www.timeleft.info/download/timeleft.exe dest=/tmp/timeleft.exe
+      path: "{{ ansible_env.HOME }}/.wine/drive_c/Program Files (x86)/TimeLeft3/TimeLeft.exe"    
+      url: https://www.timeleft.info/download/timeleft.exe
+      validate_certs: False

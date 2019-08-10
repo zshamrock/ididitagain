@@ -5,7 +5,7 @@
   changed_when: False
       
 - name: download {{ package.name }}
-  get_url: url={{ package.url }} dest=/tmp/{{ package.name }}.exe
+  get_url: url={{ package.url }} dest=/tmp/{{ package.name }}.exe validate_certs={{ package.validate_certs | default("True") }}
   when: not wine_package_status.stat.exists
 
 - name: run wine to install {{ package.name }}

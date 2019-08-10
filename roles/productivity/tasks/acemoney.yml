@@ -3,8 +3,8 @@
   vars:
     package:
       name: acemoney
-      path: "{{ ansible_env.HOME }}/.wine/drive_c/Program Files/AceMoney/AceMoney.exe"
+      path: "{{ ansible_env.HOME }}/.wine/drive_c/Program Files (x86)/AceMoney/AceMoney.exe"
 # here I download not the latest version, as there is a know issue with registration using the latest version,
 # so have to download this one, register, and then upgrade to the latest version manually
-      url: http://www.mechcad.net/downloads/win95/AceMoneySetup.exe dest=/tmp/acemoney.exe 
+      url: http://cdn.mechcad.net/downloads/AceMoneySetup.exe
 
