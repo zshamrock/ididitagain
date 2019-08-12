@@ -1,16 +1,29 @@
 ---
 - name: add docker gpg key
   become: yes
-  apt_key: keyserver=hkp://p80.pool.sks-keyservers.net:80 id=58118E89F3A912897C070ADBF76221572C52609D state=present
+  apt_key: 
+    url: https://download.docker.com/linux/debian/gpg
+    state: present
 
 - name: add docker debian deb repository
   become: yes
-  apt_repository: repo="deb https://apt.dockerproject.org/repo debian-buster main" update_cache=yes state=present  
+  apt_repository: 
+    repo: "deb [arch=amd64] https://download.docker.com/linux/debian buster stable" 
+    filename: docker
+    update_cache: yes 
+    state: present
   tags: debian
 
 - name: install docker engine      
   become: yes
-  apt: name=docker-engine state=latest
+  apt: 
+    name: "{{ packages }}" 
+    state: latest
+  vars:
+    packages:
+    - docker-ce  
+    - docker-ce-cli
+    - containerd.io
 
 - name: add docker group
   become: yes
