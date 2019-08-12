@@ -5,12 +5,11 @@ me:
   user.name: Aliaksandr Kazlou
   user.email: aliaksandr.kazlou@gmail.com
 
-jdk_patch_version: 191
-jdk_version: 1.8.0_{{ jdk_patch_version }}
-jdk_release: 8u{{ jdk_patch_version }}
-jdk_build: "12"
-jdk_path_id: 2787e4a523244c269598db4e85c51e0c
-jdk_archive: "{{ jdk_release }}-b{{ jdk_build }}/{{ jdk_path_id }}/jdk-{{ jdk_release }}-linux-x64.tar.gz"
+jdk_update: 191                                                                                                                                              
+jdk_build: 12                                                                                                                                                
+jdk_version: 1.8.0_{{ jdk_update }}                                                                                                                          
+# See https://stackoverflow.com/questions/10268583/downloading-java-jdk-on-linux-via-wget-is-shown-license-page-instead                                      
+jdk_url: http://javadl.oracle.com/webapps/download/AutoDL?BundleId=235704_2787e4a523244c269598db4e85c51e0c
 
 go_version: "1.12.7"
 go_path: $HOME/go
@@ -22,7 +21,7 @@ idea_path: /usr/local/idea{{ idea_version }}
 maven_version: 3.6.1
 groovy_version: 2.5.7
 groovyserv_version: 1.2.0
-ant_version: 1.10.6
+ant_version: 1.10.1
 antlr_version: 4.7.2
 
 # version without quotes like 2.10, for some reason sdkman installs 2.1 instead then
