@@ -6,6 +6,7 @@
     - .profile 
     - .gitignore
     - .vimrc
+    - .stalonetrayrc
     - .bash_aliases  
     - .gradle/gradle.properties
     - .lein/profiles.clj  
