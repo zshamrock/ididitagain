@@ -1,5 +1,6 @@
 ---
 - include: timeleft.yml
+  tags: [timeleft]
 - include: acemoney.yml  
 - include: xmind.yml  
   tags: [xmind]
