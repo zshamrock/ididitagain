@@ -1,7 +1,8 @@
 [Desktop Entry]
-Name=Tilda
-Exec=/usr/bin/tilda 
+Categories=GNOME;GTK;System;Utility;TerminalEmulator;
+Exec=/usr/bin/tilda
+Hidden=false
 Icon=/usr/share/pixmaps/tilda.png
+Name=Tilda
 Terminal=false
 Type=Application
-Categories=GNOME;GTK;System;Utility;TerminalEmulator;

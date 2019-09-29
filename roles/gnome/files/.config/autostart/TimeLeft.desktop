@@ -1,7 +1,0 @@
-[Desktop Entry]
-Name=TimeLeft
-Exec=env WINEPREFIX="/home/alex/.wine" wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/alex/.wine/dosdevices/c:/users/Public/Start\\ Menu/Programs/TimeLeft\\ 3/TimeLeft.lnk 
-Type=Application
-StartupNotify=true
-Path=/home/alex/.wine/dosdevices/c:/Program Files/TimeLeft3
-Icon=AC97_TimeLeft.0
