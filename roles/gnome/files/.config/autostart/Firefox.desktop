@@ -1,0 +1,21 @@
+[Desktop Entry]
+Categories=Network;WebBrowser;
+Comment[en_US]=Latest Firefox Browser
+Comment=Latest Firefox Browser
+Exec=/home/alex/tools/firefox/firefox
+GenericName[en_US]=Latest Firefox Browser
+GenericName=Latest Firefox Browser
+Icon=/home/alex/tools/firefox/browser/chrome/icons/default/default64.png
+MimeType=text/html;image/png;image/jpeg;image/gif;application/xml;application/xml;application/xhtml+xml;application/vnd.mozilla.xul+xml;application/rss+xml;application/rdf+xml;
+Name[en_US]=Firefox
+Name=Firefox
+Path=
+StartupNotify=true
+StartupWMClass=Firefox
+Terminal=false
+TerminalOptions=
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=

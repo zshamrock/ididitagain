@@ -1,0 +1,26 @@
+[Desktop Entry]
+Categories=GNOME;GTK;Network;InstantMessaging;
+Comment[en_US]=Slack Desktop
+Comment=Slack Desktop
+DBusActivatable=false
+Exec=/usr/bin/slack %U
+GenericName[en_US]=Slack Client for Linux
+GenericName=Slack Client for Linux
+Hidden=false
+Icon[en_US]=/usr/share/pixmaps/slack.png
+Icon=/usr/share/pixmaps/slack.png
+MimeType=
+Name[en_US]=Slack
+Name=Slack
+NoDisplay=false
+Path=
+StartupNotify=true
+StartupWMClass=Slack
+Terminal=false
+TerminalOptions=
+Type=Application
+Version=1.0
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=

@@ -1,0 +1,23 @@
+[Desktop Entry]
+Categories=Utility;Clock;HamRadio
+Comment[en_US]=See the time in other timezones
+Comment=See the time in other timezones
+Comment[fr]=Voir l'heure dans d'autres fuseaux horaires
+Encoding=UTF-8
+Exec=gworldclock
+GenericName[en_US]=World Clock
+GenericName=World Clock
+Hidden=true
+Icon=gworldclock
+MimeType=
+Name[en_US]=gworldclock
+Name=gworldclock
+Path=
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=
