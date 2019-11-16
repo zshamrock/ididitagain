@@ -30,3 +30,9 @@ target/
 
 # Review Board
 .reviewboardrc
+
+# Kotlin
+build/
+
+# Gradle
+.gradle/
