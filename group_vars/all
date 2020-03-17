@@ -11,7 +11,7 @@ jdk_version: 1.8.0_{{ jdk_update }}
 # See https://stackoverflow.com/questions/10268583/downloading-java-jdk-on-linux-via-wget-is-shown-license-page-instead                                      
 jdk_url: http://javadl.oracle.com/webapps/download/AutoDL?BundleId=235704_2787e4a523244c269598db4e85c51e0c
 
-go_version: "1.13.5"
+go_version: "1.14.1"
 go_path: $HOME/go
 go_root: /usr/local/go
 
