@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=LWin to Mode Switch
+Exec=xmodmap -e "keycode 133 = Mode_switch Mode_switch" && xmodmap -e "keycode 113 = Left NoSymbol Home" && xmodmap -e "keycode 114 = Right NoSymbol End" && xmodmap -e "keycode 111 = Up NoSymbol Prior" && xmodmap -e "keycode 116 = Down NoSymbol Next" 
+Terminal=false
+Type=Application
+
