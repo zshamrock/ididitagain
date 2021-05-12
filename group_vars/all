@@ -11,11 +11,11 @@ jdk_version: 1.8.0_{{ jdk_update }}
 # See https://stackoverflow.com/questions/10268583/downloading-java-jdk-on-linux-via-wget-is-shown-license-page-instead                                      
 jdk_url: http://javadl.oracle.com/webapps/download/AutoDL?BundleId=235704_2787e4a523244c269598db4e85c51e0c
 
-go_version: "1.16.3"
+go_version: "1.16.4"
 go_path: $HOME/go
 go_root: /usr/local/go
 
-idea_version: 2021.1
+idea_version: 2021.1.1
 idea_path: /usr/local/idea{{ idea_version }}
 
 maven_version: 3.6.1
